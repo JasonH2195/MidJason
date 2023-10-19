@@ -4,19 +4,21 @@ import {Button} from 'react-bootstrap';
 
 function App() {
 
+  // default state for variables
   const [name,setName] =useState("");
   const [description,setDescription] =useState("");
   const [catergory,setCatergory] =useState("");
   const [quantity,setQuantity] =useState("");
   const [price,setPrice] =useState("");
 
-
+  // Event for setting variables 
   const handleName = (e) => setName(e.target.value);   
   const handleDescription = (e) => setDescription(e.target.value);   
   const handleCatergory = (e) => setCatergory(e.target.value);   
   const handleQuantity = (e) => setQuantity(e.target.value);   
   const handlePrice = (e) => setPrice(e.target.value);   
 
+  // Store for Submit button
   const handleSubmit = (e) => {
     alert(`Name: ${name}
            Description: ${description}
@@ -26,6 +28,7 @@ function App() {
         `)
   }
 
+  // Reset for cancel button 
   const handleCancel = (e) => {
     setName(""); 
     setDescription(""); 
@@ -33,7 +36,6 @@ function App() {
     setQuantity(""); 
     setPrice(""); 
   }
-
 
 
   return (
@@ -83,19 +85,10 @@ function App() {
                 </table>                
               </td>
             </tr>
-
           </tbody>
         </table>
-
       </form>
-
-
-
-
-
-
     </div>
   );
 }
-
 export default App;
